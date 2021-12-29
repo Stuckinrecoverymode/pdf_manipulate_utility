@@ -157,7 +157,7 @@ class Pdfapp(QMainWindow, Ui_MainWindow):
 
     def about_pdfapp(self):
         dialogMessage = QMessageBox()
-        dialogMessage.setText('Pdf manipulate program\nV1.0\nAuthor: Murat Yilmaz')
+        dialogMessage.setText('Pdf manipulate program\nV1.0')
         dialogMessage.setWindowTitle('Pdf App')
         dialogMessage.exec_()
 
