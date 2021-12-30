@@ -2,7 +2,7 @@
 Pdf manipulating with PymuPDF
 A basic desktop application to manipulate pdf files.
 
-** Features**
+***Features***
 
 --- merging pdf files
 --- encrypt pdf files
