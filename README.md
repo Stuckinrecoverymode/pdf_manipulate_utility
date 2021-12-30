@@ -1,5 +1,5 @@
 # pdf_manipulate_utility
-Pdf manipulating with PymuPDF.
+Pdf manipulating using PymuPDF python library.
 A basic desktop application to manipulate pdf files.
 
 ***Features***
