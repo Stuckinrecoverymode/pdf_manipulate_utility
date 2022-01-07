@@ -65,7 +65,7 @@ class Ui_MainWindow(object):
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(390, 0, 661, 711))
         self.label.setMouseTracking(True)
-        self.label.setStyleSheet("background-color: rgba(0, 0, 0, 80);\n"
+        self.label.setStyleSheet("background-color: rgba(0, 0, 30, 180);\n"
 "border-bottom-right-radius: 30px;\n"
 "")
         self.label.setText("")
