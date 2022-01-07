@@ -29,7 +29,7 @@ class Pdfapp(QMainWindow, Ui_MainWindow):
         self.merge.clicked.connect(lambda: self.merge_pdf())
         #self.merge.clicked.connect(lambda: self.open_file())
         #self.pushButton.clicked.connect(lambda: self.save_file())
-        #self.close.clicked.connect(lambda: self.closeEvent())
+        self.close.clicked.connect(lambda: self.closeEvent())
         self.show()
 
     def gettext(self):
@@ -152,8 +152,8 @@ class Pdfapp(QMainWindow, Ui_MainWindow):
         dialogMessage.exec_()
         xdh.close()
 
-    #def closeEvent(self, event):
-        #event.accept()
+    def closeEvent(self, event):
+        event.accept()
 
     def about_pdfapp(self):
         dialogMessage = QMessageBox()
