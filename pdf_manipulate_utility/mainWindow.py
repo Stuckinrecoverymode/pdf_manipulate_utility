@@ -19,6 +19,8 @@ class Ui_MainWindow(object):
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        MainWindow.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMaximumSize(QtCore.QSize(1051, 763))
         MainWindow.setMouseTracking(True)
@@ -58,7 +60,6 @@ class Ui_MainWindow(object):
         self.widget.setGeometry(QtCore.QRect(0, 0, 431, 711))
         self.widget.setMouseTracking(True)
         self.widget.setStyleSheet("border-image: url(:/image/image/background.jpg);\n"
-"border-top-left-radius: 30px;\n"
 "border-bottom-left-radius: 30px;")
         self.widget.setObjectName("widget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -66,7 +67,6 @@ class Ui_MainWindow(object):
         self.label.setMouseTracking(True)
         self.label.setStyleSheet("background-color: rgba(0, 0, 0, 80);\n"
 "border-bottom-right-radius: 30px;\n"
-"border-top-right-radius: 30px;\n"
 "")
         self.label.setText("")
         self.label.setObjectName("label")
@@ -134,9 +134,12 @@ class Ui_MainWindow(object):
         self.del_metadata.setObjectName("del_metadata")
         self.actionimage_to_pdf = QtWidgets.QAction(MainWindow)
         self.actionimage_to_pdf.setObjectName("actionimage_to_pdf")
+        self.close = QtWidgets.QAction(MainWindow)
+        self.close.setObjectName("close")
         self.menuFile.addAction(self.actionConvert)
         self.menuFile.addAction(self.del_metadata)
         self.menuFile.addAction(self.actionimage_to_pdf)
+        self.menuFile.addAction(self.close)
         self.menuhelp.addAction(self.about)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuhelp.menuAction())
@@ -155,6 +158,7 @@ class Ui_MainWindow(object):
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuhelp.setTitle(_translate("MainWindow", "help"))
         self.actionConvert.setText(_translate("MainWindow", "Convert"))
+        self.close.setText(_translate("MainWindow", "exit"))
         self.about.setText(_translate("MainWindow", "about"))
         self.del_metadata.setText(_translate("MainWindow", "del_metadata"))
         self.actionimage_to_pdf.setText(_translate("MainWindow", "image_to_pdf"))
