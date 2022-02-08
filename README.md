@@ -5,6 +5,7 @@ A basic desktop application to manipulate pdf files.
 ***Features***
 
 --- merging pdf files
+--- splitting pdf files
 --- encrypt pdf files
 --- creating pdf files that in list with photos
 --- deleting metadata from a pdf file
