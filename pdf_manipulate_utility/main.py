@@ -30,6 +30,7 @@ class Pdfapp(QMainWindow, Ui_MainWindow):
         #self.merge.clicked.connect(lambda: self.open_file())
         #self.pushButton.clicked.connect(lambda: self.save_file())
         self.close.clicked.connect(lambda: self.closeEvent())
+        self.splitpdf.triggered.connect(lambda: self.split_pdf())
         self.show()
 
     def gettext(self):
@@ -85,7 +86,23 @@ class Pdfapp(QMainWindow, Ui_MainWindow):
         dialogMessage.setText('PDF is now encrpyted with your password.')
         dialogMessage.exec_()
         doc.close()
-
+        
+    def split_pdf(self):
+        self.open_file()
+        page_number = 0
+        page_number, _ = QInputDialog.getText(self, 'Page Number', 'Enter page range:')
+        page_number = int(page_number)
+        docm = fitz.open(file_path[0])
+        doc = fitz.open()
+        doc.insert_pdf(docm, to_page = page_number-1)
+        self.save_file()
+        doc.save(save_path, garbage=4)
+        dialogMessage = QMessageBox()
+        dialogMessage.setText('pdf splitting completed.')
+        dialogMessage.exec_()
+        docm.close()
+        doc.close()
+        
     def image_to_pdf(self):
         self.open_images()
         doc = fitz.open()
