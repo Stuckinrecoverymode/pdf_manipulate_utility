@@ -29,7 +29,7 @@ class Pdfapp(QMainWindow, Ui_MainWindow):
         self.merge.clicked.connect(lambda: self.merge_pdf())
         #self.merge.clicked.connect(lambda: self.open_file())
         #self.pushButton.clicked.connect(lambda: self.save_file())
-        self.close.clicked.connect(lambda: self.closeEvent())
+        # self.close.clicked.connect(lambda: self.closeEvent())
         self.splitpdf.triggered.connect(lambda: self.split_pdf())
         self.show()
 
