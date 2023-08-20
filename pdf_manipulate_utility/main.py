@@ -1,8 +1,7 @@
 import os
 import sys
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import * #QFileDialog, QApplication, QInputDialog, QLineEdit, QMainWindow
-from PyQt5.QtGui import QIcon, QFont
+from PyQt5.QtWidgets import QFileDialog, QApplication, QInputDialog, QLineEdit, QMainWindow, QMessageBox
+from PyQt5.QtGui import QIcon
 import fitz
 from mainWindow import Ui_MainWindow
 
